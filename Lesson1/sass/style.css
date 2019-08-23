@@ -1,0 +1,80 @@
+body, sass {
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  font-family: "PT Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.products .product-item {
+  border: 1px solid #DDD;
+  padding: 20px;
+  width: 200px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+.products .product-item h3 {
+  margin: 0px;
+}
+.products .product-item p {
+  font-weight: bold;
+}
+.products .product-item button {
+  padding: 8px 20px;
+  background: #FFF;
+  color: #000;
+  border-radius: 3px;
+  border: 1px solid #DDD;
+}
+.products .product-item:hover {
+  transform: scale(1.05);
+}
+.products .product-item:hover button {
+  border: 0px;
+  padding: 8px 20px;
+  background: #00b600;
+  color: #FFF;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.products .product-item:hover button:hover {
+  background: #00d600;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+header .trade-mark {
+  color: #00b600;
+  font-size: 30px;
+  font-weight: bold;
+}
+header .btn-cart {
+  border: 1px solid #00b600;
+  padding: 8px 30px;
+  border-radius: 3px;
+  font-weight: bold;
+  background: #FFF;
+  position: relative;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+header .btn-cart:hover {
+  background: #00b600;
+  color: #FFF;
+}
+
+/*# sourceMappingURL=style.css.map */
