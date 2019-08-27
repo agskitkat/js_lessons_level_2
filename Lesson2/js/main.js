@@ -5,6 +5,7 @@ class ProductList {
     this.allProducts = [];
     this._fetchProducts();
     this._render();
+    this.getTotalSum();
   }
   _fetchProducts() {
     this.goods = [
@@ -22,6 +23,14 @@ class ProductList {
       this.allProducts.push(productObject);
       block.insertAdjacentHTML('beforeend', productObject.render())
     }
+  }
+  getTotalSum() {
+    let totalSum = 0;
+    for(let good of this.goods) {
+      totalSum += good.price;
+    }
+    console.log(totalSum);
+    return totalSum;
   }
 }
 
@@ -45,23 +54,69 @@ class ProductItem {
   }
 }
 
-const list = new ProductList();
+/**
+ * Класс описывающий корзину
+ */
+class Cart {
 
-// const products = [
-//   {id: 1, title: 'Notebook', price: 1000},
-//   {id: 2, title: 'Mouse', price: 100},
-//   {id: 3, title: 'Keyboard', price: 250},
-//   {id: 4, title: 'Gamepad', price: 150},
-// ];
-//
-// const renderProduct = (item, img = 'https://placehold.it/200x150') => `<div class="product-item">
-//             <img src="${img}" alt="Some img">
-//             <h3>${item.title}</h3>
-//             <p>${item.price}</p>
-//             <button class="by-btn">Добавить</button>
-//           </div>`;
-//
-// const renderProducts = list => document.querySelector('.products')
-//   .insertAdjacentHTML('beforeend', list.map(item => renderProduct(item)).join(''));
-//
-// renderProducts(products);
+  /**
+   * Добавление товара в корзину
+   */
+  addProduct() {
+
+  }
+
+  /**
+   * Изменяет количестово товара в корзине
+   */
+  changeQuantity() {
+
+  }
+
+  /**
+   * Удаляет товар из корзины
+   */
+  removeProduct() {
+
+  }
+
+  /**
+   * Считает сумму товаров в корзине
+   */
+  calcSum() {
+
+  }
+
+  /**
+   * Обновление списка корзины
+   */
+  render() {
+
+  }
+}
+
+/**
+ * Класс описывающий товар в корзине
+ */
+class CartItem {
+  /**
+   * Метод принимает параметры товара
+   * @param {ProductItem} productItem экземпляр объекта товара
+   * @param {Number}      quantity    количество товара в корзине
+   * @this  CartItem
+   */
+  constructor(productItem, quantity = 1) {
+
+  }
+
+  /**
+   * Возвращает HTML код товара корзиный
+   * @return {String} HTML код.
+   */
+  render() {
+
+  }
+
+}
+
+const list = new ProductList();
