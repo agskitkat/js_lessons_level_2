@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="log"></div>
+    <button id="btn">Promise</button>
+</body>
+<script>
+
+
+   function testPromise1() {
+       return new Promise((resolve, reject) => {
+           // Имитация или ресурсоёмкого процесса
+           window.setTimeout(
+               function() {
+                   // Обещание выполнено!
+                   resolve('Обещание 1 выполнено!')
+               }, 2000);
+       });
+   }
+
+   function testPromise2() {
+       return new Promise((resolve, reject) => {
+           // Имитация или ресурсоёмкого процесса
+           window.setTimeout(
+               function() {
+                   // Обещание выполнено!
+                   resolve('Обещание 2 выполнено!')
+               }, 2000);
+       });
+   }
+
+   function testPromise3() {
+       return new Promise((resolve, reject) => {
+           // Имитация или ресурсоёмкого процесса
+           window.setTimeout(
+               function() {
+                   // Обещание выполнено!
+                   reject('Обещание 3 НЕ выполнено!');
+                   resolve('Обещание 3 выполнено!')
+               }, 2000);
+       });
+   }
+
+   testPromise1()
+       .then((val)=>{
+           console.log(val);
+           return testPromise2();
+       })
+       .then((val)=>{
+           console.log(val);
+           return testPromise3();
+       })
+       .then((val)=>{
+           console.log(val);
+       })
+       .catch((error) => {
+           console.log(error);
+       });
+</script>
+</html>
