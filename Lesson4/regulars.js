@@ -15,7 +15,7 @@ Two: 'It's their anniversary.'
 One: 'That's great. Well, you better get going. You don't want to be late.'
 Two: 'I'll see you next time.'
 One: 'Sure.' Bye.'`;
-str = str.replace(/!?\B\'/gm, '"');
+str = str.replace(/!?\B\'/gm, '"'); // Просто замена /\'/gm или вообще "'"
 console.log(str);
 
 
