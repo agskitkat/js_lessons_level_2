@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamburger Calc</title>
+    <link rel="stylesheet" href="sass/hamburger.css">
+
+    <script src="js/hamburger.js" defer></script>
+</head>
+<body>
+    <div class="hamburger-form">
+        <fieldset>
+            <label>Вид гамбургера</label>
+            <select name="type" id="type" required></select>
+        </fieldset>
+
+        <fieldset>
+            <label>Начинка</label>
+            <select name="filling" id="filling" required></select>
+        </fieldset>
+
+        <fieldset>
+            <label>Приправа</label>
+            <div class="hamburger-form__checkboxes" id="spice"></div>
+        </fieldset>
+
+        <button id="calc">Рассчитать</button>
+    </div>
+    <div class="hamburger-result">
+        <div class="hamburger-result__fullname" id="fullname"></div>
+        <div class="hamburger-result__price" id="price"></div>
+        <div class="hamburger-result__calories" id="calories"></div>
+    </div>
+</body>
+</html>

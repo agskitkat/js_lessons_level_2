@@ -1,0 +1,16 @@
+.hamburger-result {
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+fieldset {
+  padding: 0 0 20px;
+  border: 0;
+  display: flex;
+}
+fieldset > label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=hamburger.css.map */
