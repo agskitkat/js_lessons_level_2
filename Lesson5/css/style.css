@@ -1,0 +1,19 @@
+.cart {
+    position: absolute;
+    display: block;
+    background: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    top: 60px;
+    right: 0px;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.input-group-itemCart {
+    max-width:133px;
+}
+
+.input-group-itemCart input {
+    text-align: center;
+}
